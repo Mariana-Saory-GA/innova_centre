@@ -6,7 +6,6 @@
     top: 15%;
 }
 .content-text{
-    color: rgb(45,10,114);
     position: absolute;
     left: 55%;
     top: 120px;
@@ -16,6 +15,7 @@
 .content-text h1{
     position: relative;
     text-align: center;
+    color: rgb(45,10,114);
     font-size: 45px;
     width: 100%;
     height: 20%;

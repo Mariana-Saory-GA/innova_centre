@@ -1,8 +1,10 @@
 import React from 'react';
+import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './Components/Pages/Home.jsx';
 import WhoAreWe from './Components/Pages/whoAreWe.jsx';
 import Services from './Components/Pages/Services/services.jsx';
+import Footer from './Components/Pages/Footer.js';
 import WebPage from './Components/Pages/Services/WebPage.jsx';
 import DigitalMarketing from './Components/Pages/Services/DigitalMarketing.jsx';
 import Ecommerce from './Components/Pages/Services/Ecommerce.jsx';
@@ -11,9 +13,9 @@ import Ecommerce from './Components/Pages/Services/Ecommerce.jsx';
 
 function App() {
   return (
-    <div className="App" id="outer-container">
+    <div className="page-container" id="outer-container">
+      <div className="content-wrap">
       <Router>
-        {/*<Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>*/}
           <Switch>
             <Route path="/">
               <Home/>
@@ -35,6 +37,8 @@ function App() {
             </Route>
           </Switch>
       </Router>
+      </div>
+      <Footer/>
     </div>
   );
 }

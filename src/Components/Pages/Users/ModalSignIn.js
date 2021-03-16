@@ -3,10 +3,10 @@ import {useSpring, animated} from 'react-spring'
 import styled from 'styled-components'
 import {MdClose} from 'react-icons/md'
 import { Form } from 'react-bootstrap'
-import Login from './../../img/Images/LogIn.svg'
+import Login from '../../../img/Images/LogIn.svg'
 import GoogleLogin from 'react-google-login'
 import FacebookLogin from 'react-facebook-login'
-import './../Styles/ModalSingIn.css'
+import '../../Styles/ModalSignIn.css'
 import Recaptcha from 'react-recaptcha'
 
 const Background = styled.div`

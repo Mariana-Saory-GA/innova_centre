@@ -1,0 +1,22 @@
+.content-pictureProf{
+    position: fixed;
+    margin: 0;
+    height: 20%;
+    width: 10%;
+    top: 30%;
+    left: 9%;
+}
+
+.content-pictureProfChanger{
+    position: fixed;
+    margin: 0;
+    height: 15%;
+    width: 10%;
+    top: 45%;
+    left: 7%;
+    z-index: 10;
+}
+
+.btnChange{
+    color: white !important;
+}

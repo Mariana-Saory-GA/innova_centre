@@ -5,8 +5,9 @@ import WhoAreWe from './whoAreWe';
 import Services from './Services/services';
 import Events from './Events/Events';
 import styled from 'styled-components';
-import {Modal} from './ModalSignIn';
-import {Modalsu} from './ModalSignUp';
+import {Modal} from './Users/ModalSignIn';
+import {Modalsu} from './Users/ModalSignUp';
+import ProfAvatar from './Users/ProfilePicture';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Sidebar from './Sidebar'; 
 
@@ -60,6 +61,7 @@ function Home() {
     return (
         <div className="content-home">
             <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
+            <ProfAvatar/>
             <Container>
             <Button onClick={openModal}> Iniciar sesión </Button>
             <Modal showModalSignin={showModalSignin} setShowModalSignin={setShowModalSignin}/>

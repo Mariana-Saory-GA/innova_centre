@@ -1,0 +1,9 @@
+.content-footer{
+    color: white;
+    background: rgb(41,8,113);
+    background: radial-gradient(circle, rgba(41,8,113,1) 69%, rgba(86,19,124,1) 100%);
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

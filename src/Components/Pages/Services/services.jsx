@@ -93,7 +93,7 @@ const useStyles= makeStyles((theme) => ({
        margin: '0px',
        position: 'absolute',
        top: '0.9%',
-       left: '21%',
+       left: '18.5%',
        zIndex: 10,
     },
     gridMD:{
@@ -116,13 +116,11 @@ const useStyles= makeStyles((theme) => ({
         position: 'absolute',
         top: '20px',
         left: '200px',
-        color: '#290871',
     },
     textInfo: {
         position: 'absolute',
         top: '100px',
-        left: '70px',
-        color: '#290871',
+        left: '90px',
         textAlign: 'center',
     },
     buttonLanding: {
@@ -193,7 +191,7 @@ export default function Services() {
                         <Typography gutterBottom variant="h3"> Página Web </Typography>
                     </div>
                     <div className={classes.textInfo}>
-                        <Typography gutterBottom variant="h5"> Creamos tu página web a la medida de tu negocio. <br/> ¡Deja que el mundo te conozca! </Typography>
+                        <Typography gutterBottom variant="h6"> Creamos tu página web a la medida de tu negocio. <br/> ¡Deja que el mundo te conozca! </Typography>
                     </div>
                     <ButtonBase className={classes.image}>
                         <img className={classes.img} alt="complex" src={PW}/>
@@ -226,10 +224,10 @@ export default function Services() {
             <Grid container spacing={1} className={classes.gridMD}>
                 <Grid items xs={8} md={6}>
                     <div className={classes.textTitle}>
-                        <Typography gutterBottom variant="h3"> Marketing Digital </Typography>
+                        <Typography gutterBottom variant="h4"> Marketing Digital </Typography>
                     </div>
                     <div className={classes.textInfo}>
-                        <Typography gutterBottom variant="h5"> [Descripción]</Typography>
+                        <Typography gutterBottom variant="h6"> [Descripción]</Typography>
                     </div>
                     <ButtonBase className={classes.image}>
                         <img className={classes.img} alt="complex" src={MD}/>
@@ -265,7 +263,7 @@ export default function Services() {
                         <Typography gutterBottom variant="h3"> Ecommerce </Typography>
                     </div>
                     <div className={classes.textInfo}>
-                        <Typography gutterBottom variant="h5"> Para negocios que venden en línea,  y desean <br/> incrementar sus ventas. </Typography>
+                        <Typography gutterBottom variant="h6"> Para negocios que venden en línea,  y desean <br/> incrementar sus ventas. </Typography>
                     </div>
                     <ButtonBase className={classes.image}>
                         <img className={classes.img} alt="complex" src={Ecom}/>

@@ -1,8 +1,8 @@
 .bm-burger-button{
     position: fixed;
     width: 3.5%;
-    height: 3.5%;
-    top: 400px;
+    height: 3.9%;
+    top: 70%;
     left: 10%;
 }
 
@@ -27,7 +27,7 @@
     position: fixed;
     height: 50% !important;
     width: 22.5% !important;
-    top: 300px;
+    top: 55%;
 }
 
 .bm-menu{

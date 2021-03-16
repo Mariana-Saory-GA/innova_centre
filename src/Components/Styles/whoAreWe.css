@@ -11,6 +11,10 @@
     top: 10%;
     width: 50%;
     position: relative;
+    
+}
+
+.content-who h1{
     color: rgb(45,10,114);
 }
 

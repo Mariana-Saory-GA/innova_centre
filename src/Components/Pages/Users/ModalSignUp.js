@@ -3,7 +3,7 @@ import {useSpring, animated} from 'react-spring';
 import styled from 'styled-components';
 import {MdClose} from 'react-icons/md';
 import { Form, Col, Row } from 'react-bootstrap';
-import Signup from './../../img/Images/SignUp.svg'
+import Signup from '../../../img/Images/SignUp.svg'
 
 const Background = styled.div`
     width: 100%;
@@ -85,7 +85,7 @@ export const Modalsu = ({showModalSignup, setShowModalSignup}) => {
         transform: showModalSignup ? `translateY(0%)` : `translateY(-100%)`
     });
 
-    const closeModal = e => {
+    const closeModalSU = e => {
         if(modalRef.current === e.target){
             setShowModalSignup(false)
         }
@@ -109,7 +109,7 @@ export const Modalsu = ({showModalSignup, setShowModalSignup}) => {
     return(
         <>
             {showModalSignup ? (
-                <Background>
+                <Background ref={modalRef} onCick={closeModalSU}>
                     <animated.div style={animation}>
                     <ModalWrapper showModalSignup={showModalSignup}>
                     <ModalImg src={Signup} alt='SignUp'/>
