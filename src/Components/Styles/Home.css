@@ -1,0 +1,73 @@
+.content-innova{
+    position: absolute;
+    left: 30%;
+    height: 80%;
+    width: 60%;
+    top: 15%;
+}
+.content-text{
+    color: rgb(45,10,114);
+    position: absolute;
+    left: 55%;
+    top: 120px;
+    width: 50%;
+}
+
+.content-text h1{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    width: 100%;
+    height: 20%;
+}
+
+.content-img{
+    width: 50%;
+    height: 90%;
+    left: 5%;
+    top: 10px;
+    position: absolute;
+}
+
+.brandIso{
+    width: 80%;
+    height: 95%;
+    left: 5%;
+    position: relative;
+
+}
+
+/* WhatsApp desktop */
+
+.whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgb(45,10,114);
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+.whatsapp-icon {
+    margin-top: 16px;
+}
+
+  /* Mobile */
+  @media screen and (max-width: 767px) {
+    .whatsapp-icon {
+        margin-top: 10px;
+    }
+
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 22px;
+    }
+}

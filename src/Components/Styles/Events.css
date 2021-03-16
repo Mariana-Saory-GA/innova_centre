@@ -1,0 +1,15 @@
+.content-events{
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 1000px;
+}
+
+.content-eventText{
+    flex-basis: 50%;
+    overflow: hidden;
+    left: 750px;
+    top: 1250px;
+    position: relative;
+    color: rgb(45,10,114);
+}

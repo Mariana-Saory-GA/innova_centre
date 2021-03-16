@@ -1,0 +1,31 @@
+.content-video{
+    position: absolute;
+    top: 90%;
+    left: 24%;
+    height: 150%;
+    width: 80%;
+}
+
+.content-who{
+    left: 35%;
+    top: 10%;
+    width: 50%;
+    position: relative;
+    color: rgb(45,10,114);
+}
+
+.video-who{
+    position: relative;
+    top: 15%;
+}
+
+.video-js{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.video-js .vjs-big-play-button{
+    background-color: rgb(45,10,114) !important;
+}
