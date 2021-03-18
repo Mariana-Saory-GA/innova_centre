@@ -2,8 +2,51 @@
     color: white;
     background: rgb(41,8,113);
     background: radial-gradient(circle, rgba(41,8,113,1) 69%, rgba(86,19,124,1) 100%);
-    padding-top: 3em;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.content-brand-footer{
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 50%;
+    height: 5%;
+    width: 8%;
+}
+
+.brandHomeFooter{
+    height: 70%;
+    width: 100%;
+}
+
+.row{
+    width: 100%;
+    height: 1%;
+}
+
+.col-sm{
+    position: relative;
+    padding-top: 0.5rem;
+    left: 35%;
+    font-size: small;
+}
+
+.col-sm2{
+    position: relative;
+    left: 45%;
+    font-size: small;
+}
+
+.content-social{
+    position: relative;
+    left: 48%;
+    width: 20%;
+}
+
+.content-social a{
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none !important;
 }

@@ -3,20 +3,22 @@
     margin: 0;
     height: 20%;
     width: 10%;
-    top: 30%;
+    top: 26%;
     left: 9%;
 }
 
 .content-pictureProfChanger{
     position: fixed;
     margin: 0;
-    height: 15%;
+    height: 5%;
     width: 10%;
-    top: 45%;
+    top: 40%;
     left: 7%;
     z-index: 10;
 }
 
 .btnChange{
     color: white !important;
+    width: 10%;
+    position: fixed;
 }

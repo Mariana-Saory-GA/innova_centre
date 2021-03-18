@@ -3,9 +3,10 @@ import LogoP from '../../../img/Logos/LOGO 2.1 B.png';
 import {makeStyles} from '@material-ui/core/styles';
 import {AppBar, IconButton, Toolbar} from  '@material-ui/core';
 import Collapse from '@material-ui/core/Collapse';
-import {FaBars} from 'react-icons/fa';
+import {FaBars, FaTimes} from 'react-icons/fa';
 import {AiOutlineArrowDown} from 'react-icons/ai';
 import {Navbar} from 'react-bootstrap';
+import {Link as Scroll} from 'react-scroll';
 
 
 const useStyles = makeStyles ((theme)  => ({
@@ -35,15 +36,21 @@ const useStyles = makeStyles ((theme)  => ({
         fontFamily: "Fjalla One",
         fontSize: "2rem",
     },
+    colorText: {
+        color: "#F8DF27",
+        fontFamily: "Fjalla One",
+    },
     container: {
         textAlign: "center",
     },
     goDown: {
-        color: "#fff",
+        color: "#F8DF27",
         fontSize: "2.5rem",
     },
 
 }));
+
+
 
 export default function Header(){
     const classes = useStyles();
@@ -52,7 +59,10 @@ export default function Header(){
         setChecked(true);
     }, [])
 
-    return <div className={classes.root}>
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
+
+    return <div className={classes.root} id="header">
         <AppBar className={classes.appbar} elevation={0}>
             <Toolbar classname={classes.appbarWrapper}>
             <h1 className={classes.appbarTitle}>
@@ -61,17 +71,20 @@ export default function Header(){
             </Navbar.Brand>
             </h1>
             <IconButton>
-                <FaBars className={classes.icon}/>
+                <FaBars className={classes.icon} onClick={handleClick}/>
+                <i className={click ? <FaBars/> : <FaTimes/>} />
             </IconButton>
             </Toolbar>
         </AppBar>
 
         <Collapse in={checked} {...(checked ? { timeout: 1000} : {})} collapsedHeight={5} >
         <div className={classes.container}>
-            <h1 className={classes.titleKnow}> Conoce los paquetes de Página Web <br/> que Innova Centre te ofrece.</h1>
+            <h1 className={classes.titleKnow}> Conoce los paquetes de Página Web <br/> que <span className={classes.colorText}> Innova Centre </span> te ofrece.</h1>
+            <Scroll to="service-pack" smooth={true}>
             <IconButton>
                 <AiOutlineArrowDown className={classes.goDown}/>
             </IconButton>
+            </Scroll>
         </div>
         </Collapse>
     </div>

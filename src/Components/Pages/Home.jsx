@@ -7,6 +7,7 @@ import Events from './Events/Events';
 import styled from 'styled-components';
 import {Modal} from './Users/ModalSignIn';
 import {Modalsu} from './Users/ModalSignUp';
+import {QuoteForm} from './Users/QuoteForm';
 import ProfAvatar from './Users/ProfilePicture';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Sidebar from './Sidebar'; 
@@ -45,6 +46,19 @@ const Buttonup = styled.button`
     top: 10px;
     z-index: 10;
 `
+const Buttonqf = styled.button`
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background: #260770;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    top: 150px;
+    z-index: 10;
+`
 
 function Home() {
     const [showModalSignin, setShowModalSignin] = useState(false)
@@ -58,6 +72,12 @@ function Home() {
     const openModalSU = () =>{
         setShowModalSignup(prev => !prev)
     }
+
+    const [showQuoteForm, setShowQuoteForm] = useState(false)
+
+    const openQF = () =>{
+        setShowQuoteForm(prev => !prev)
+    }
     return (
         <div className="content-home">
             <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
@@ -70,6 +90,11 @@ function Home() {
             <Container>
                 <Buttonup onClick={openModalSU}> Registrarme </Buttonup>
                 <Modalsu showModalSignup={showModalSignup} setShowModalSignup={setShowModalSignup}/>
+            </Container>
+
+            <Container>
+                <Buttonqf onClick={openQF}> ¡Cotiza con <br/> nosotros! </Buttonqf>
+                <QuoteForm showQuoteForm={showQuoteForm} setShowQuoteForm={setShowQuoteForm}/>
             </Container>
             <section className="content-innova">
                 <div className="content-text">

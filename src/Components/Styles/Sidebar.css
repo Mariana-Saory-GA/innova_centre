@@ -25,9 +25,9 @@
 
 .bm-menu-wrap{
     position: fixed;
-    height: 50% !important;
+    height: 55% !important;
     width: 22.5% !important;
-    top: 55%;
+    top: 50%;
 }
 
 .bm-menu{
@@ -74,14 +74,15 @@
     margin: 0;
     position: fixed;
     z-index: 10;
-    height: 40%;
-    width: 25%;
+    height: 20%;
+    width: 20%;
+
 }
 
 .brandHome{
-    height: 40%;
-    width: 60%;
+    height: 50%;
+    width: 50%;
     position: relative;
-    left: 20%;
+    left: 39%;
     align-items: center;
 }

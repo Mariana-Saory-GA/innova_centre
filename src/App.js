@@ -17,7 +17,7 @@ function App() {
       <div className="content-wrap">
       <Router>
           <Switch>
-            <Route path="/">
+            <Route path="/" exact>
               <Home/>
             </Route>
             <Route path="/whoAreWe">
