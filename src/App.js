@@ -9,8 +9,6 @@ import WebPage from './Components/Pages/Services/WebPage.jsx';
 import DigitalMarketing from './Components/Pages/Services/DigitalMarketing.jsx';
 import Ecommerce from './Components/Pages/Services/Ecommerce.jsx';
 
-
-
 function App() {
   return (
     <div className="page-container" id="outer-container">

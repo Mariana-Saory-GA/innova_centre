@@ -33,6 +33,7 @@
     "react-spring": "^9.0.0-rc.3",
     "react-video-js-player": "^1.1.1",
     "react-whatsapp": "^0.2.1",
+    "reactstrap": "^8.9.0",
     "styled-components": "^5.2.1",
     "svg-react-loader": "^0.4.6",
     "web-vitals": "^1.1.0"
