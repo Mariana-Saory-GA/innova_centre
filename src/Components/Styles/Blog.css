@@ -1,0 +1,25 @@
+.content-blog{
+    position: absolute;
+    top: 425%;
+    left: 24%;
+    width: 75%;
+    height: 100%;
+}
+
+.content-blogTitle{
+    position: relative;
+    left: 40%;
+    top: 10%;
+    width: 45%;
+}
+
+.content-blog h1{
+    color: rgb(45,10,114);
+}
+
+.content-instagram{
+    position: absolute;
+    top: 30%;
+    height: 100px;
+    width: 600px;
+}

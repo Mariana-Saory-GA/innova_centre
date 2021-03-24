@@ -12,8 +12,8 @@ const Footer = () => {
                     <img class="img-fluid img" src={logo} alt="brandHome" height="100" width="100" className="brandHomeFooter"/>
                 </Navbar.Brand>
             </div>
-            <div className="row">
-                <p className="col-sm2"> Encuéntranos en nuestras redes sociales: </p>
+            <div className="social-media">
+                <p className="findus"> Encuéntranos en nuestras redes sociales: </p>
             </div>
             <div className="content-social">
                 <a href="https://www.facebook.com/innovacentre.latam/" target="_blank" rel="noopener noreferrer"> <FaFacebook/> </a>
@@ -22,8 +22,8 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/company/innovacentre/" target="_blank" rel="noopener noreferrer"> <FaLinkedin/> </a>
                 <a Href="mailto:contacto@innovacentre.com.mx"> <FaEnvelope/> </a>
             </div>
-            <div className="row">
-                <p className="col-sm" >
+            <div className="content-date">
+                <p className="footer-date" >
                     &copy; {new Date().getFullYear()} Innova Centre | www.innovacentre.com.mx | Todos los derechos reservados
                 </p>
             </div>

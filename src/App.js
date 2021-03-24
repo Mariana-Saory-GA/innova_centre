@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './Components/Pages/Home.jsx';
 import WhoAreWe from './Components/Pages/whoAreWe.jsx';
 import Services from './Components/Pages/Services/services.jsx';
+import Events from './Components/Pages/Events/Events.jsx';
+import ContactUs from './Components/Pages/Users/ContactUs.jsx';
 import Footer from './Components/Pages/Footer.js';
 import WebPage from './Components/Pages/Services/WebPage.jsx';
 import DigitalMarketing from './Components/Pages/Services/DigitalMarketing.jsx';
@@ -32,6 +34,12 @@ function App() {
             </Route>
             <Route path="/Ecommerce">
               <Ecommerce/>
+            </Route>
+            <Route path="/Events">
+              <Events/>
+            </Route>
+            <Route path="/ContactUs">
+              <ContactUs/>
             </Route>
           </Switch>
       </Router>

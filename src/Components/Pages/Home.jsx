@@ -4,6 +4,7 @@ import './../Styles/Home.css';
 import WhoAreWe from './whoAreWe';
 import Services from './Services/services';
 import Events from './Events/Events';
+import Blog from './Blog/Blog';
 import ProfAvatar from './Users/ProfilePicture';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Sidebar from './Sidebar'; 
@@ -29,10 +30,11 @@ function Home() {
             <WhoAreWe></WhoAreWe>
             <Services></Services>
             <Events></Events>
+            <Blog></Blog>
             
             <MessengerCustomerChat pageId="1002978683130119" appId="442093927099752"/>
             <a
-                href="https://wa.me/525560896293"
+                href="https://wa.me/525574513963"
                 class="whatsapp_float"
                 target="_blank"
                 rel="noopener noreferrer">

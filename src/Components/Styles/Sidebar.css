@@ -33,7 +33,7 @@
 .bm-menu{
     background: linear-gradient(#290871, #56137c);
     padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
+    font-size: 1rem;
 }
 
 .bm-morph-shape{
@@ -47,7 +47,7 @@
 
 .bm-item{
     display: inline-block;
-    color: #fff;
+    color: #fff !important;
     margin-bottom: 10px;
     text-align: left;
     text-decoration: none !important;
