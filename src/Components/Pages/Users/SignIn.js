@@ -5,20 +5,89 @@ import 'bootstrap/dist/css/bootstrap.css';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
 import './../../Styles/SignIn.css';
+import Recaptcha from 'react-recaptcha';
+import axios from 'axios';
 
 class SignIn extends React.Component{
-    
-    /* Sección del Modal */
-    state = {
-        open: false,
+
+    constructor(props){
+        super(props);
+        this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+        this.verifyCallback = this.verifyCallback.bind(this);
+        this.validar_captcha = this.validar_captcha.bind(this);
+        this.state = {
+            correo: '',
+            contrasena: '',
+            isVerified: false,
+            open: false
+        
+        }
     }
+    
+    validar_captcha(e){
+        e.preventDefault();
+        
+        
+          if(this.state.isVerified){
+            this.handleSignIn(e);  
+          }else{
+            alert("Verifica el captcha");
+          }
+          
+          }
+          handleSignIn(e){
+            e.preventDefault();
+            const datos = {
+                email : e.target.email.value,
+                clave: e.target.contrasena.value,
+            };
+            axios.post('https://innovacentre.com.mx/apirest/login.php', datos).then(
+                    response => {
+                        if(response.data['email'] !== undefined){
+                          //const{jwt}=response
+                          //return jwt
+        
+                          alert("Estas logueado");  
+                          console.log("Estás logueado");
+                          //window.location.href = ("/inicio");
+                          //navigate ('/inicio');
+                         
+        
+                          
+                        }else{
+                            alert("Usuario o contraeña incorrecta");
+                            console.log("Credenciales inválidas");
+                        }
+                    }).catch(e =>{
+                        alert('Ha ocurrido un error inesperado, intenta de nuevo :(');
+                    });
+          }
+
+    verifyCallback(response){
+        if(response){
+            this.setState({
+                isVerified: true
+            })
+        }
+    }
+    
+    recaptchaLoaded(){
+        console.log('capcha success');
+    }
+
+    valueToState = ({name, value}) => {
+        this.setState( () =>{
+            return {[name]: value};
+        });
+    }
+
 
     openModal = () =>{
         this.setState({open: !this.state.open})
     }
     render(){
-
     /* Google */
+
     const responseGoogle = (response) =>{
         console.log(response);
     };
@@ -38,21 +107,28 @@ class SignIn extends React.Component{
             </div>
 
                 <Modal isOpen={this.state.open}>
+                <Form onSubmit={this.validar_captcha}>
                     <ModalHeader>
                         Iniciar sesión
                     </ModalHeader>
                     <ModalBody>
-                    <Form>
-                        <Form.Group controlId="formEmail">
+                   
+                        <Form.Group controlId="email">
                             <Label for="formEmail"> Correo: </Label>
-                            <Form.Control type="email" placeholder="Correo electrónico"/>
+                            <Form.Control type="email" placeholder="Correo electrónico" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"required
+                            onChange={(e) =>this.login.setEmail(e.target.value)} onChange={event => this.valueToState(event.target)}/>
+        
                         </Form.Group>
-                        <Form.Group controlId="formPassword">
+                        <Form.Group controlId="contrasena">
                             <Label for="formPassword"> Contraseña: </Label>
-                            <Form.Control type="password" placeholder="Contraseña"/>
+                            <Form.Control type="password" placeholder="Contraseña"required
+                           onChange={(e) =>this.login.setContrasena(e.target.value)} onChange={event => this.valueToState(event.target)} />
                         </Form.Group>
                             <Form.Check type="Checkbox" label="Recuérdame"/>
-                    </Form>
+
+                           
+
+                    
                     <p className="options-signin"> Inicia sesión con Facebook o Google </p>
                         <GoogleLogin
                             clientId="1093473912863-h49r37h0d3ed71d3o959fuvrn2ith96t.apps.googleusercontent.com"
@@ -69,11 +145,25 @@ class SignIn extends React.Component{
                             textButton=" Facebook"
                             icon="fa-facebook"
                             cssClass="iconFb" />
+ 
+                        <div class="py-3 ">
+                        <Recaptcha
+                            sitekey="6LfLe-UZAAAAAET_rtZONdi6JU-0C1n_GBjH9-og"
+                            render="explicit"
+                            onloadCallback={this.recaptchaLoaded}
+                            verifyCallback={this.verifyCallback}
+                                />
+                        </div>
+                         
+                        
                     </ModalBody>
-                    <ModalFooter>
-                        <Button color="warning"> Iniciar sesión </Button>
+                   
+
+                    <ModalFooter class="py-1 ">
+                        <Button color="warning" type="submit"> Iniciar sesión </Button>
                         <Button onClick={this.openModal} color="warning"> Cerrar </Button>
                     </ModalFooter>
+                    </Form>
                 </Modal>
             </>
         )
