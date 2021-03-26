@@ -5,7 +5,7 @@ import Home from './Components/Pages/Home.jsx';
 import WhoAreWe from './Components/Pages/whoAreWe.jsx';
 import Services from './Components/Pages/Services/services.jsx';
 import Events from './Components/Pages/Events/Events.jsx';
-import ContactUs from './Components/Pages/Users/ContactUs.jsx';
+import ContactUs from './Components/Pages/Users/ContactUs.js';
 import Footer from './Components/Pages/Footer.js';
 import WebPage from './Components/Pages/Services/WebPage.jsx';
 import DigitalMarketing from './Components/Pages/Services/DigitalMarketing.jsx';

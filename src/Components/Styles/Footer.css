@@ -4,14 +4,15 @@
     background: radial-gradient(circle, rgba(41,8,113,1) 69%, rgba(86,19,124,1) 100%);
     position: relative;
     bottom: 0;
-    width: 100%;
+    width: 80%;
+    left: 22.5%;
 }
 
 .content-brand-footer{
     margin: 0;
     position: relative;
     top: 0;
-    left: 50%;
+    left: 52%;
     height: 5%;
     width: 8%;
 }
@@ -41,8 +42,8 @@
 
 .content-social{
     position: relative;
-    left: 42%;
-    width: 30%;
+    left: 40%;
+    width: 35%;
 }
 
 .content-social a{

@@ -1,0 +1,11 @@
+.content-quoteform{
+    margin: 0 auto;
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 180px;
+    top: 160px;
+    right: 0px;
+    z-index: 1;
+    transform: rotate(-90deg);
+}

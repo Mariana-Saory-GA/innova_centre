@@ -37,7 +37,7 @@ export default class SignUp extends React.Component{
        
         if (p1 !== p2) {
           
-         alert("Las conraseñas no coinciden");
+         alert("Las contraseñas no coinciden");
       
         } else {
           if(this.state.isVerified){
@@ -107,11 +107,19 @@ export default class SignUp extends React.Component{
         return(
             <>
                 <div className="content-signup">
-                    <Button style={{backgroundColor: '#f0c508', color: '#000',  position: "absolute", top: '50%', left: '50%',
-                    transform: "translate(-50%, -50%)", border: 'none', width: '150px', padding: '10px 24px'}} onClick={this.openModalSignUp}> Registrarme </Button>
+                    <Button style={{
+                        backgroundColor: '#f0c508', 
+                        color: '#000',  
+                        position: "absolute", 
+                        top: '50%', 
+                        left: '50%',
+                        transform: "translate(-50%, -50%)", 
+                        border: 'none', 
+                        width: '150px', 
+                        padding: '10px 24px'}} 
+                        onClick={this.openModalSignUp}> Registrarme 
+                    </Button>
                 </div>
-
-                
 
                 <Modal isOpen={this.state.openSignUp}>
                 <Form onSubmit={this.validar_contrasena}>
@@ -188,22 +196,13 @@ export default class SignUp extends React.Component{
                                     onloadCallback={this.recaptchaLoaded}
                                     verifyCallback={this.verifyCallback}
                                 />
-
-
                     </ModalBody>
-                    
                     <ModalFooter>
-                        
                         <Button color="warning" type="submit" value="Submit" > Registrarme </Button>
                         <Button onClick={this.openModalSignUp} color="warning"> Cancelar </Button>
-                        
-                        
-
                     </ModalFooter>
-                    
                     </Form>
                 </Modal>
-                
             </>
         )
     }

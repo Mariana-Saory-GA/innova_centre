@@ -10,6 +10,7 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Sidebar from './Sidebar'; 
 import SignIn from './Users/SignIn';
 import SignUp from './Users/SignUp';
+import QuoteForm from './Users/QuoteForm';
 
 
 function Home() {
@@ -19,6 +20,7 @@ function Home() {
             <ProfAvatar/>
             <SignIn/>
             <SignUp/>
+            <QuoteForm/>
             <section className="content-innova">
                 <div className="content-text">
                     <h1> INNOVA CENTRE <br/> SIEMPRE CONTIGO </h1>

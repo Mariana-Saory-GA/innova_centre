@@ -7,6 +7,8 @@ import FacebookLogin from 'react-facebook-login';
 import './../../Styles/SignIn.css';
 
 class SignIn extends React.Component{
+    
+    /* Sección del Modal */
     state = {
         open: false,
     }
@@ -15,8 +17,8 @@ class SignIn extends React.Component{
         this.setState({open: !this.state.open})
     }
     render(){
-    /* Google */
 
+    /* Google */
     const responseGoogle = (response) =>{
         console.log(response);
     };

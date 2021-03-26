@@ -32,7 +32,7 @@
     top: 200px;
     left: 20%;
     background: rgb(50, 11, 116, 0.2);
-    padding: 40px;
+    padding: 50px;
     border-radius: 10px;
 }
 
@@ -41,4 +41,5 @@
     position: relative;
     left: 42%;
     padding: 8px 18px !important;
+    margin-top: 20px;
 }
