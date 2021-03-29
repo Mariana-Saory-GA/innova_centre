@@ -4,8 +4,9 @@
     position: fixed;
     height: 80px;
     width: 180px;
-    top: 160px;
-    right: 0px;
+    top: 200px;
+    right: -30px;
     z-index: 1;
     transform: rotate(-90deg);
+    
 }

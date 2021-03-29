@@ -10,15 +10,21 @@ import './../../Styles/QuoteForm.css';
 class QuoteForm extends React.Component{
     constructor(props){
         super(props);
+        /* Captcha */
         this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
         this.verifyCallback = this.verifyCallback.bind(this);
-        this.state = {
+        /* Envío de datos al correo */
+        //this.sendEmail = this.sendEmail.bind(this);
 
+        this.state = {
+            
             /* Modal Quote Form */
             openQuoteForm: false,
+            /* Captcha */
             isVerified: false
         }
     }
+
 
     /* Captcha */   
     verifyCallback(response){
@@ -43,15 +49,16 @@ class QuoteForm extends React.Component{
             <>
             <div className="content-quoteform">
             <Button style={{
-                backgroundColor: '#92238c', 
-                color: '#fff',  
+                backgroundColor: '#721a83', 
+                color: '#f5f5f5',
+                fontWeight: 'bold',  
                 position: "absolute", 
                 top: '50%', 
                 left: '50%',
-                transform: "translate(-50%, -50%)", 
+                transform: "translateX(-50%)", 
                 border: 'none', 
                 width: '150px', 
-                padding: '8px 14px'}} 
+                padding: '8px 10px'}} 
                 onClick={this.openModalQF}> ¡Cotiza con <br/> nosotros! 
             </Button>
             </div>

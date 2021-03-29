@@ -92,7 +92,7 @@ class ContactUs extends React.Component{
                                 </Form.Control>
                             </Form.Group>
                             <Form.Group controlId="formMessage">
-                                <Form.Label> Mensaje: </Form.Label>
+                                <Form.Label style={{color: "#6c757d"}}> Mensaje: </Form.Label>
                                 <Form.Control as="textarea" rows={3} id="mensaje" value={this.state.mensaje} onChange={this.onMessageChange.bind(this)}/>
                             </Form.Group>
                             <Recaptcha
