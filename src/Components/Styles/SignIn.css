@@ -11,6 +11,7 @@
 
 .modal-header{
     background: rgb(38, 7, 112);
+    
 }
 
 .modal-title{
@@ -24,6 +25,7 @@
     position: relative;
     left: 25%;
     width: 300px;
+    top: 10px;
 }
 
 .iconFb{

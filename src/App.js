@@ -10,8 +10,6 @@ import Footer from './Components/Pages/Footer.js';
 import WebPage from './Components/Pages/Services/WebPage.jsx';
 import DigitalMarketing from './Components/Pages/Services/DigitalMarketing.jsx';
 import Ecommerce from './Components/Pages/Services/Ecommerce.jsx';
-import MessengerCustomerChat from 'react-messenger-customer-chat' ;
-
 
 function App() {
   return (
@@ -47,7 +45,6 @@ function App() {
       </Router>
       </div>
       <Footer/>
-      < MessengerCustomerChat pageId = "1002978683130119 " appId = "442093927099752"/ > 
     </div>
   );
 }

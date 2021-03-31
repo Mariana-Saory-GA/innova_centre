@@ -20,14 +20,11 @@ class SignIn extends React.Component{
             contrasena: '',
             isVerified: false,
             open: false
-        
         }
     }
     
     validar_captcha(e){
         e.preventDefault();
-        
-        
           if(this.state.isVerified){
             this.handleSignIn(e);  
           }else{
@@ -81,19 +78,19 @@ class SignIn extends React.Component{
         });
     }
 
-
+    /* Modal de inicio de sesión */
     openModal = () =>{
         this.setState({open: !this.state.open})
     }
-    render(){
-    /* Google */
 
+    render(){
+
+    /* Google */
     const responseGoogle = (response) =>{
         console.log(response);
     };
 
     /* Facebook */
-
     const responseFacebook = (response) => {
         console.log("Nombre: " +response.name);
         console.log("Correo: " +response.email);
@@ -125,10 +122,14 @@ class SignIn extends React.Component{
                            onChange={(e) =>this.login.setContrasena(e.target.value)} onChange={event => this.valueToState(event.target)} />
                         </Form.Group>
                             <Form.Check type="Checkbox" label="Recuérdame"/>
-
-                           
-
-                    
+                            <div style={{position:"relative", left:"80px", top:"5px"}}>
+                                <Recaptcha
+                                    sitekey="6LfLe-UZAAAAAET_rtZONdi6JU-0C1n_GBjH9-og"
+                                    render="explicit"
+                                    onloadCallback={this.recaptchaLoaded}
+                                    verifyCallback={this.verifyCallback}
+                                />
+                            </div>  
                     <p className="options-signin"> Inicia sesión con Facebook o Google </p>
                         <GoogleLogin
                             clientId="1093473912863-h49r37h0d3ed71d3o959fuvrn2ith96t.apps.googleusercontent.com"
@@ -145,17 +146,6 @@ class SignIn extends React.Component{
                             textButton=" Facebook"
                             icon="fa-facebook"
                             cssClass="iconFb" />
- 
-                        <div class="py-3 ">
-                        <Recaptcha
-                            sitekey="6LfLe-UZAAAAAET_rtZONdi6JU-0C1n_GBjH9-og"
-                            render="explicit"
-                            onloadCallback={this.recaptchaLoaded}
-                            verifyCallback={this.verifyCallback}
-                                />
-                        </div>
-                         
-                        
                     </ModalBody>
                    
 
@@ -164,6 +154,14 @@ class SignIn extends React.Component{
                         <Button onClick={this.openModal} color="warning"> Cerrar </Button>
                     </ModalFooter>
                     </Form>
+                </Modal>
+
+                <Modal isOper={this.state.openRP}>
+                    <ModalHeader>
+                        Recuperar mi contraseña
+                    </ModalHeader>
+                    <ModalBody>
+                    </ModalBody>
                 </Modal>
             </>
         )

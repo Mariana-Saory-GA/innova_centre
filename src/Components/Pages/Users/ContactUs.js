@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import emailjs from 'emailjs-com';
 import Sidebar from '../Sidebar';
 import '../../Styles/ContactUs.css';
 import FormContact from '../../../img/Images/FormContact.svg';
@@ -13,31 +14,50 @@ class ContactUs extends React.Component{
         /* Captcha */
         this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
         this.verifyCallback = this.verifyCallback.bind(this);
+        /* Enviar correo */
+        this.sendEmail = this.sendEmail.bind(this);
+        this.handleContact = this.handleContact.bind(this);
         /* Axios */ 
         this.state = {
+            servicio: [],
             nombre: '',
             empresa: '',
             email: '',
             telefono: '',
             servicio: '',
-            mensaje: ''
+            mensaje: '',
+            isVerified: false
         }
     }
     /* Sección de Axios */
-    handleSubmit(e){
-        e.preventDefault();
-        axios({
-            method: "POST",
-            url: "http://localhost:3000/send",
-            data: this.state
-        }).then((response) => {
-            if(response.data.status === 'success'){
-                alert("Mensaje enviado");
-                this.resetForm()
-            } else if (response.data.status === 'fail'){
-                alert("Error al enviar el mensaje")
+    componentDidMount(){
+        axios.get(`https://innovacentre.com.mx/apirest/servicios.php`)
+            .then(res => {
+            const servicios = res.data;
+            this.setState ({servicios});
             }
-        })
+        )
+    }
+
+    sendEmail(e) {
+        e.preventDefault();
+        emailjs.sendForm('ConnectInnova', 'template_hgnwhnf', e.target, 'user_mrxJmCM0ZgZCQVnEQupZl')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            e.target.reset()
+    }
+
+    handleContact(e){
+        if(this.state.isVerified){
+            //php
+            this.sendEmail(e);
+            alert('Correo enviado')
+        }else{
+            alert('Error al enviar correo')
+        }
     }
     /* Sección de Captcha */
     verifyCallback(response){
@@ -52,10 +72,6 @@ class ContactUs extends React.Component{
         console.log('Captcha correcto');
     }
 
-    /* Sección para limpiar el formulario */
-    resetForm(){
-        this.setState({nombre: '', empresa: '', email: '', telefono: '', servicio: '', mensaje: ''})
-    }
     render (){
         return(
             <>
@@ -67,24 +83,24 @@ class ContactUs extends React.Component{
                         <img class="img-fluid" src={FormContact} className="form-image"/>
                     </div>
                     <div className="form-fields">
-                        <Form className="form-decoration" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                        <Form className="form-decoration" onSubmit={this.handleContact}>
                             <Form.Group controlId="formName">
-                                <Form.Control placeholder="Nombre*" id="nombre" value={this.state.nombre} onChange={this.onNameChange.bind(this)}/>
+                                <Form.Control placeholder="Nombre*" id="nombre" required onChange={event => this.valueToState(event.target)}/>
                             </Form.Group>
                             <Form.Group controlId="formCompany">
-                                <Form.Control placeholder="Empresa" id="empresa" value={this.state.empresa} onChange={this.onCompanyChange.bind(this)}/>
+                                <Form.Control placeholder="Empresa" id="empresa" onChange={event => this.valueToState(event.target)} />
                             </Form.Group>
                             <Form.Group controlId="formEmail">
-                                <Form.Control placeholder="Correo electrónico*" id="email" value={this.state.email} onChange={this.onEmailChange.bind(this)}/>
+                                <Form.Control placeholder="Correo electrónico*" id="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required onChange={event => this.valueToState(event.target)}/>
                                 <Form.Text className="text-muted">
                                     Nunca compartiremos tu correo con otras personas.
                                 </Form.Text>
                             </Form.Group>
                             <Form.Group controlId="formPhone">
-                                <Form.Control placeholder="Teléfono de contacto*" id="telefono" value={this.state.telefono} onChange={this.onPhoneChange.bind(this)}/>
+                                <Form.Control placeholder="Teléfono de contacto*" id="telefono" pattern="^(0|[1-9][0-9]*)$" onChange={event => this.valueToState(event.target)}/>
                             </Form.Group>
                             <Form.Group controlId="formService">
-                                <Form.Control as="select" defaultValue="Servicio" id="servicio" value={this.state.servicio} onChange={this.onServiceChange.bind(this)}>
+                                <Form.Control as="select" defaultValue="Servicio" id="servicio" onChange={event => this.valueToState(event.target)}>
                                     <option> Seleccione un servicio* </option>
                                     <option> Página Web </option>
                                     <option> Marketing Digital </option>
@@ -93,7 +109,7 @@ class ContactUs extends React.Component{
                             </Form.Group>
                             <Form.Group controlId="formMessage">
                                 <Form.Label style={{color: "#6c757d"}}> Mensaje: </Form.Label>
-                                <Form.Control as="textarea" rows={3} id="mensaje" value={this.state.mensaje} onChange={this.onMessageChange.bind(this)}/>
+                                <Form.Control as="textarea" rows={3} id="mensaje" onChange={event => this.valueToState(event.target)}/>
                             </Form.Group>
                             <Recaptcha
                                 sitekey="6LfLe-UZAAAAAET_rtZONdi6JU-0C1n_GBjH9-og"
@@ -111,30 +127,6 @@ class ContactUs extends React.Component{
             </div>
             </>
         );
-    }
-
-    onNameChange(event) {
-        this.setState({nombre: event.target.value})
-    }
-
-    onCompanyChange(event) {
-        this.setState({empresa: event.target.value})
-    }
-
-    onEmailChange(event) {
-        this.setState({email: event.target.value})
-    }
-
-    onPhoneChange(event) {
-        this.setState({telefono: event.target.value})
-    }
-
-    onServiceChange(event){
-        this.setState({servicio: event.target.value})
-    }
-
-    onMessageChange(event){
-        this.setState({mensaje: event.target.value})
     }
 }
 export default ContactUs

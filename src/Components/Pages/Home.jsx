@@ -32,22 +32,14 @@ function Home() {
             <WhoAreWe></WhoAreWe>
             <Services></Services>
             <Events></Events>
-            
             <Blog></Blog>
-
-            
-
-           
-
-
-            
             <MessengerCustomerChat pageId="1002978683130119" appId="442093927099752"/>
             <a
                 href="https://wa.me/525574513963"
                 class="whatsapp_float"
                 target="_blank"
                 rel="noopener noreferrer">
-            <i class="fa fa-whatsapp whatsapp-icon"></i>
+                <i class="fa fa-whatsapp whatsapp-icon"></i>
             </a>
         </div>
     )

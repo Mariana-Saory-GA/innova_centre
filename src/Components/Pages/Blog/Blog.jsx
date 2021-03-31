@@ -2,6 +2,7 @@ import React from 'react';
 import '../../Styles/Blog.css';
 import InstagramEmbed from 'react-instagram-embed';
 
+
 function Blog (){
     return(
         <>
