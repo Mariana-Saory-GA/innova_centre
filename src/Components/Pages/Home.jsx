@@ -5,6 +5,8 @@ import WhoAreWe from './whoAreWe';
 import Services from './Services/services';
 import Events from './Events/Events';
 import Blog from './Blog/Blog';
+import Carrusel from './Carrusel/carrusel';
+import Widget from './widget/widget';
 import ProfAvatar from './Users/ProfilePicture';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Sidebar from './Sidebar'; 
@@ -33,6 +35,17 @@ function Home() {
             <Services></Services>
             <Events></Events>
             <Blog></Blog>
+<<<<<<< HEAD
+=======
+            <Widget></Widget>
+            <Carrusel></Carrusel>
+
+
+           
+
+
+            
+>>>>>>> origin/master
             <MessengerCustomerChat pageId="1002978683130119" appId="442093927099752"/>
             <a
                 href="https://wa.me/525574513963"
