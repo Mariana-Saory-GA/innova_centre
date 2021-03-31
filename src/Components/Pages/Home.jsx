@@ -5,6 +5,8 @@ import WhoAreWe from './whoAreWe';
 import Services from './Services/services';
 import Events from './Events/Events';
 import Blog from './Blog/Blog';
+import Carrusel from './Carrusel/carrusel';
+import Widget from './widget/widget';
 import ProfAvatar from './Users/ProfilePicture';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Sidebar from './Sidebar'; 
@@ -32,10 +34,10 @@ function Home() {
             <WhoAreWe></WhoAreWe>
             <Services></Services>
             <Events></Events>
-            
             <Blog></Blog>
+            <Widget></Widget>
+            <Carrusel></Carrusel>
 
-            
 
            
 

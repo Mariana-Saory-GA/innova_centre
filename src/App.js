@@ -46,6 +46,7 @@ function App() {
           </Switch>
       </Router>
       </div>
+      
       <Footer/>
       < MessengerCustomerChat pageId = "1002978683130119 " appId = "442093927099752"/ > 
     </div>

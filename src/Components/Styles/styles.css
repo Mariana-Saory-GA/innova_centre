@@ -1,0 +1,63 @@
+
+.carrusel {
+  
+  display: flex;
+  width: 76%;
+  align-items: center;
+  justify-content: center;
+  height: 68vh;
+  background: linear-gradient(0.25turn,#310A74,#310A74,#92278B ,#701982,#701982 100%);
+  z-index: 1;
+}
+
+.distancia{
+  position: absolute;
+  top: 790%;
+  left: 23%;
+  width: 100%;
+  height: 100%;
+}
+
+.distancia_widget{
+  position: absolute;
+  top: 630%;
+  left: 23%;
+  width: 100%;
+  height: 100%;
+}
+
+.cont{  
+  position: relative;
+  width: 76%;
+  
+  
+}
+.titulo{
+position: relative;
+left: 25%;
+top: 10%;
+width: 45%;
+}
+.titulo h1{
+color: rgb(45,10,114);
+}
+
+
+.img_1{ 
+  min-height: 290px;
+  background-image: url('https://restcountries.eu/data/afg.svg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img_2{ 
+  min-height: 290px;
+  background-image:url('https://restcountries.eu/data/ala.svg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+  
+
