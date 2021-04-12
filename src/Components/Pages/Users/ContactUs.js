@@ -7,6 +7,7 @@ import FormContact from '../../../img/Images/FormContact.svg';
 import {Form} from 'react-bootstrap';
 import {Button} from 'reactstrap';
 import Recaptcha from 'react-recaptcha';
+import Footer from './../Footer';
 
 class ContactUs extends React.Component{
     constructor(props){
@@ -75,7 +76,10 @@ class ContactUs extends React.Component{
     render (){
         return(
             <>
-            <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
+            <Sidebar 
+                pageWrapId={'page-wrap'} 
+                outerContainerId={'outer-container'}
+            />
             <div className="content-form">
                 <h1> ¡Contáctanos! </h1>
                 <div className="form-contact">
@@ -125,7 +129,8 @@ class ContactUs extends React.Component{
                     </div>
                 </div>
             </div>
-            </>
+            <Footer/>
+        </>
         );
     }
 }

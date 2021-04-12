@@ -1,11 +1,15 @@
 .page-container{
     display: flex;
     flex-direction: column;
-    min-height: 800vh;
+    min-height: 150vh;
     overflow: -moz-hidden-unscrollable;
 }
 
 .content-wrap{
     flex: 1;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden; /* Nos permite omitir el scroll horizontal */
 }

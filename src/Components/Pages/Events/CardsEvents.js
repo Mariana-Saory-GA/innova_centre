@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../Styles/services.css'
+import './../../Styles/Home.css'
 
 const CardsEvents = props =>{
     return(
@@ -14,7 +14,7 @@ const CardsEvents = props =>{
                         {props.text}
                     </p>
             <a href="#" className="btn btn-outline-warning"> Más información </a>
-            <a href="#" className="btn btn-outline-secondary" style={{marginTop: '5px'}}> Boletos </a>
+            <a href="#" className="btn btn-outline-secondary" style={{margin: '10px'}}> Boletos </a>
             </div>
             </div>
         </>

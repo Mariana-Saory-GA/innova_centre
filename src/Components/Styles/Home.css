@@ -1,14 +1,30 @@
-.content-innova{
-    position: absolute;
-    left: 30%;
-    height: 80%;
-    width: 60%;
-    top: 15%;
+section.content-innova{
+    position: relative;
+    display: flex;
+    height: 600px;
+    width: 100%;
+    left: 9%;
 }
+
+.content-img{
+    position: relative;
+    width: 40%;
+    height: 80%;
+    top: 10%;
+    left: 4%;
+}
+
+.brandIso{
+    position: absolute;
+    width: 65%;
+    height: 95%;
+    margin: auto;
+}
+
 .content-text{
     position: absolute;
-    left: 55%;
-    top: 120px;
+    top: 180px;
+    left: 35%;
     width: 50%;
 }
 
@@ -16,27 +32,217 @@
     position: relative;
     text-align: center;
     color: rgb(45,10,114);
-    font-size: 45px;
+    font-size: 80px;
+    font-weight: bolder;
     width: 100%;
     height: 20%;
 }
 
-.content-img{
-    width: 50%;
-    height: 90%;
-    left: 5%;
-    top: 10px;
-    position: absolute;
-}
-
-.brandIso{
-    width: 80%;
-    height: 95%;
-    left: 5%;
+/* Aquí empiezan los estilos de '¿Quiénes somos?' */
+section.content-video{
     position: relative;
-
+    display: flex;
+    top: 20%;
+    left: 9%;
+    height: 800px;
+    width: 100%;
 }
 
+.content-who{
+    position: absolute;
+    left: auto;
+    width: 100%;
+}
+
+.content-who h1{
+    color: rgb(45,10,114);
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.video-who{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+}
+
+.video-js{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.video-js .vjs-big-play-button{
+    background-color: rgb(45,10,114) !important;
+}
+
+/* Sección de 'Servicios' */
+section.content-services{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    top: 44%;
+    left: 9%;
+}
+
+.content-text-services{
+    position: absolute;
+    width: 100%;
+    left: auto;
+}
+
+.content-text-services h1{
+    color: rgb(45,10,114);
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+/* Sección de 'Eventos' */
+section.content-events{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    top: 60%;
+    left: 9%;
+}
+
+.content-event-text{
+    position: absolute;
+    width: 100%;
+    left: auto;
+}
+
+.content-event-text h1{
+    color: rgb(45,10,114);
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;   
+}
+
+/* Cards Servicios */
+
+.card{
+    width: 25rem;
+    position: relative;
+    left: -20%;
+}
+
+.card:hover{
+    box-shadow: 5px 10px 10px 1px rgb(43, 8, 113, 0.25) !important;
+    
+}
+
+.card-body{
+    padding: 5rem !important;
+    
+}
+
+.card-text{
+    font-size: 0.9rem;
+    padding: 0.4rem 1.9rem;
+}
+
+.container-fluid.row{
+    padding-top: 6rem;
+}
+
+.row{
+    margin: 100px !important;
+}
+
+.card-img-top{
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.card-img-top:hover{
+    transform: scale(1.8);
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+/* Sección del Widget de Facebook e Instagram */
+.content-widget{
+    position: relative;
+    top: 90%;
+    left: 9%;
+    width: 100%;
+    height: 1200px;
+  }
+
+.content-text-blog{
+    position: absolute;
+    width: 100%;
+    left: auto;
+}
+
+.content-text-blog h1{
+    color: rgb(45,10,114);
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder; 
+}
+
+.content-elfsight{  
+    position: absolute;
+    top: 10%;
+    width: 90%;  
+}
+
+/* Sección de 'Clientes' */
+section.content-carousel{
+    position: relative;
+    top: 160%;
+    left: 9%;
+    width: 100%;
+    height: 600px;
+}
+
+.content-text-clients{
+    position: absolute;
+    width: 100%;
+    left: auto;
+}
+
+.content-text-clients h1{
+    color: rgb(45,10,114);
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder; 
+}
+
+.content-carousel-clients{
+    position: absolute;
+    display: flex;
+    top: 70px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    height: 68vh;
+    background: linear-gradient(0.25turn,#310A74,#310A74,#92278B ,#701982,#701982 100%);
+}  
+
+.img_1{ 
+    min-height: 290px;
+    background-image: url('https://restcountries.eu/data/afg.svg');
+    background-size: cover;
+    background-position: center; 
+}
+  
+.img_2{ 
+    min-height: 290px;
+    background-image:url('https://restcountries.eu/data/ala.svg');
+    background-size: cover;
+    background-position: center;
+}
+  
 /* WhatsApp desktop */
 
 .whatsapp_float {
@@ -69,5 +275,12 @@
         bottom: 20px;
         right: 10px;
         font-size: 22px;
+    }
+}
+
+/* Dispositivos móviles */
+@media screen and (min-width: 375px) and (max-width: 767px){
+    .content-innova, .content-video, .content-services, .content-blog{
+        
     }
 }

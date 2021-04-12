@@ -1,9 +1,9 @@
 .bm-burger-button{
     position: fixed;
-    width: 50px;
-    height: 20px;
+    width: 2.8em;
+    height: 1.1em;
     top: 70%;
-    left: 9%;
+    left: 2.5%;
 }
 
 .bm-burger-bars{
@@ -26,14 +26,14 @@
 .bm-menu-wrap{
     position: fixed;
     height: 55% !important;
-    width: 22.5% !important;
+    width: 8% !important;
     top: 50%;
 }
 
 .bm-menu{
     background: linear-gradient(#290871, #56137c);
-    padding: 2.5em 1.5em 0;
-    font-size: 1rem;
+    padding: 1em 1em 0;
+    font-size: 1.6em;
 }
 
 .bm-morph-shape{
@@ -65,16 +65,15 @@
 .sidebar{
     background: linear-gradient(#290871, #56137c);
     height: 100%;
-    width: 22.5%;
+    width: 8%;
     display: flex;
     position: fixed;
 }
 
 .content-brand{
-    margin: 0;
+    margin: auto;
     position: fixed;
     z-index: 1;
-    left: 5%;
     min-height: 25%;
     min-width: 15%;
 }
@@ -83,29 +82,36 @@
     position: absolute;
     max-width: 100%;
     max-height: 100%;
-    left: 10%;
+    transform: rotate(-90deg);
 }
 
-@media screen and (max-width: 767px) {
-    .bm-burger-button{
-        width: 40px;
-        height: 10px;
-        top: 40%;
-        left: 7%;
-    }
-
-    .bm-menu-wrap{
-        height: 55% !important;
-        width: 22.5% !important;
-        top: 50%;
-    }
-
+/* Dispositivos móviles */
+@media screen and (max-width: 667px){
     .content-brand{
-        min-height: 10%;
-        left: 2.5%;
+        display: none;
     }
 
-    .brandHome{
-        left: 6%;
+    .sidebar{
+        display: none;
+    }
+}
+/* Dispositivos Medianos, tablets */
+@media screen and (max-width: 768px) {
+    .content-brand{
+        display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px){
+   .content-brand{
+       display: none;
+   }
+
+   .sidebar{
+    display: none;
     }
 }

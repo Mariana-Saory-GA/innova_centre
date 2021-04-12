@@ -8,7 +8,6 @@ import {BiTable} from 'react-icons/bi';
 import {MdEvent} from 'react-icons/md';
 import {CgNotes} from 'react-icons/cg';
 
-
 export default props => {
     return(
         <>
@@ -19,12 +18,12 @@ export default props => {
         </div>
         <div className="sidebar"> 
         <Menu>
-            <a className="menu-item" href="/home"> <AiFillHome/> Home </a>
-            <a className="menu-item" href="/whoAreWe"> <AiFillQuestionCircle/> ¿Quiénes somos? </a>
-            <a className="menu-item" href="/services"> <BiTable/> Servicios </a>
-            <a className="menu-item" href="/Events"> <MdEvent/> Eventos </a>
-            <a className="menu-item" href="/Blog"> <CgNotes/> Blog </a>
-            <a className="menu-item" href="/ContactUs"> <AiFillMail/> Contáctanos </a>
+            <a className="menu-item" alt="Home" href="/home"> <AiFillHome/> </a>
+            <a className="menu-item" alt="¿Quiénes somos?" href="/whoAreWe"> <AiFillQuestionCircle/> </a>
+            <a className="menu-item" alt= "Servicios" href="/services"> <BiTable/> </a>
+            <a className="menu-item" alt="Eventos" href="/Events"> <MdEvent/> </a>
+            <a className="menu-item" alt="Blog" href="/Blog"> <CgNotes/> </a>
+            <a className="menu-item" alt="Contáctanos" href="/ContactUs"> <AiFillMail/> </a>
         </Menu>
         </div>
         </>

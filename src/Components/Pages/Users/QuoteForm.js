@@ -4,7 +4,7 @@ import {Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
 import {Form} from 'react-bootstrap';
 import Recaptcha from 'react-recaptcha';
 import 'bootstrap/dist/css/bootstrap.css';
-import './../../Styles/QuoteForm.css';
+import './../../Styles/Modals.css';
 
 
 class QuoteForm extends React.Component{
@@ -49,13 +49,12 @@ class QuoteForm extends React.Component{
             <>
             <div className="content-quoteform">
             <Button style={{
-                backgroundColor: '#721a83', 
+                backgroundColor: '#98248d', 
                 color: '#f5f5f5',
                 fontWeight: 'bold',  
                 position: "absolute", 
                 top: '50%', 
-                left: '50%',
-                transform: "translateX(-50%)", 
+                left: '50%', 
                 border: 'none', 
                 width: '150px', 
                 padding: '8px 10px'}} 
@@ -100,7 +99,7 @@ class QuoteForm extends React.Component{
                                 onloadCallback={this.recaptchaLoaded}
                                 verifyCallback={this.verifyCallback} />
                             <Button color="warning"> Enviar </Button>
-                            <Button onClick={this.openModalQF} color="warning"> Cancelar </Button>
+                            <Button onClick={this.openModalQF} color="warning" style={{margin: '10px'}}> Cancelar </Button>
                             <Form.Text className="text-muted">
                                 (*) Campos obligatorios.
                             </Form.Text>

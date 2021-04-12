@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
-import './../../Styles/SignIn.css';
+import './../../Styles/Modals.css';
 import Recaptcha from 'react-recaptcha';
 import axios from 'axios';
 
@@ -99,8 +99,16 @@ class SignIn extends React.Component{
         return(
             <>
             <div className="content-signin">
-                <Button style={{backgroundColor: '#f0c508', color: '#000',  position: "absolute", top: '50%', left: '50%',
-                transform: "translate(-50%, -50%)", border: 'none', width: '150px', padding: '10px 24px'}} onClick={this.openModal}> Iniciar sesión </Button>
+                <Button style={
+                    {backgroundColor: '#f0c508', 
+                    color: '#000',  
+                    position: "absolute", 
+                    top: '50%', 
+                    left: '50%',
+                    border: 'none', 
+                    width: '150px', 
+                    padding: '10px 24px'}} 
+                    onClick={this.openModal}> Iniciar sesión </Button>
             </div>
 
                 <Modal isOpen={this.state.open}>
