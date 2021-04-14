@@ -107,7 +107,8 @@ export default class SignUp extends React.Component{
         return(
             <>
                 <div className="content-signup">
-                    <Button style={{
+                    <Button className="btn-su"
+                    style={{
                         backgroundColor: '#f0c508', 
                         color: '#000',  
                         position: "absolute", 

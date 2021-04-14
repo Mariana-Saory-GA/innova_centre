@@ -48,7 +48,8 @@ class QuoteForm extends React.Component{
         return(
             <>
             <div className="content-quoteform">
-            <Button style={{
+            <Button className="btn-qf" 
+            style={{
                 backgroundColor: '#98248d', 
                 color: '#f5f5f5',
                 fontWeight: 'bold',  

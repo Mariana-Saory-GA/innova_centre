@@ -1,8 +1,8 @@
 .bm-burger-button{
     position: fixed;
     width: 2.8em;
-    height: 1.1em;
-    top: 70%;
+    height: 1em;
+    top: 50%;
     left: 2.5%;
 }
 
@@ -15,8 +15,8 @@
 }
 
 .bm-cross-button{
-    height: 24px;
-    width: 24px;
+    height: 28px;
+    width: 28px;
 }
 
 .bm-cross{
@@ -25,15 +25,15 @@
 
 .bm-menu-wrap{
     position: fixed;
-    height: 55% !important;
-    width: 8% !important;
-    top: 50%;
+    height: 85% !important;
+    width: 15% !important;
+    top: 30%;
 }
 
 .bm-menu{
     background: linear-gradient(#290871, #56137c);
-    padding: 1em 1em 0;
-    font-size: 1.6em;
+    padding: 2.5em 1.2em 0;
+    font-size: 1em;
 }
 
 .bm-morph-shape{
@@ -48,7 +48,7 @@
 .bm-item{
     display: inline-block;
     color: #fff !important;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: left;
     text-decoration: none !important;
     transition: color 0.2s;

@@ -51,7 +51,7 @@ class Home extends Component {
             <SignUp/>
             <QuoteForm/>
             {/* Aquí empieza la sección inicial de Home */}
-                <section className="content-innova">
+                <section className="content-innova" id="home">
                     <div className="content-text">
                         <h1> INNOVA CENTRE <br/> SIEMPRE CONTIGO </h1>
                     </div>
@@ -60,14 +60,14 @@ class Home extends Component {
                     </div>
                 </section>           
                 {/* Aquí se encuentra la segunda sección '¿Quiénes somos?' */}
-                <section className="content-video">
+                <section className="content-video" id="whoare">
                     <div className="content-who">
                         <h1> ¿Quiénes somos?</h1>
                     </div>
                     <div className="video-who">
                         <VideoPlayer 
                             src={videoSrc} 
-                            width="980" 
+                            width="1080" 
                             height="620" 
                             playbackRates={[0.5, 1, 3.85, 16]} 
                             className="repVideo"
@@ -75,19 +75,26 @@ class Home extends Component {
                     </div>
                 </section>
                 {/* Aquí se encuentra la sección de 'Servicios' NOTA: Es temporal, necesita cambios */}
-                <section className="content-services">
+                <section className="content-services" id="services">
                     <div className="content-text-services">
                         <h1> Servicios </h1>
                     </div>
+                    <div className="square-services">
+                        <ul className="services">
+                            <li className="op-serv"> Página Web </li>
+                            <li className="op-serv"> Marketing Digital </li>
+                            <li className="op-serv"> Ecommerce </li>
+                        </ul>
+                    </div>
                 </section>
                 {/* Aquí se encuentra la sección de 'Eventos' NOTA: Es temporal, necesita cambios */}
-                <section className="content-events">
+                <section className="content-events" id="events">
                     <div className="content-event-text">
                         <h1> Eventos </h1>
                     </div>
                     <div className='container-fluid d-flex justify-content-center'>
                         <div className='row mb-3'>
-                            <div className='col-6 col-md-4 theme-grid-col'>
+                            <div className='col-6 col-md-4 ml-auto theme-grid-col'>
                                 <Cds 
                                     imgsrc={Event1} 
                                     title="Seguridad en los entornos multicloud" 
@@ -95,7 +102,7 @@ class Home extends Component {
                                 />
                             </div>
 
-                            <div className='col-6 col-md-4 theme-grid-col'>
+                            <div className='col-6 col-md-4 ml-auto theme-grid-col'>
                                 <Cds 
                                     imgsrc={Event2} 
                                     title="Servicios de infraestructura inteligente" 
@@ -103,7 +110,7 @@ class Home extends Component {
                                 />
                             </div>
                     
-                            <div className='col-6 col-md-4 theme-grid-col'>
+                            <div className='col-6 col-md-4 ml-auto theme-grid-col'>
                                 <Cds 
                                     imgsrc={Event3} 
                                     title="Inteligencia artificial y nube híbrida" 
@@ -114,9 +121,9 @@ class Home extends Component {
                     </div>
                 </section>
                 {/* Aquí se encuentra la sección de Facebook e Instagram */}
-                <section className="content-widget">
+                <section className="content-widget" id="widget">
                     <div className="content-text-blog">
-                        <h1> Blog </h1>
+                        <h1> Recomendaciones </h1>
                     </div>
                     <div className="content-elfsight"> 
                         <ElfsightWidget 
@@ -128,7 +135,7 @@ class Home extends Component {
                     </div>   
                 </section>
                 {/* Aquí se encuentra el carrusel de clientes */}
-                <section className="content-carousel">
+                <section className="content-carousel" id="clientes">
                     <div className="content-text-clients">
                         <h1> Principales clientes </h1>
                     </div>

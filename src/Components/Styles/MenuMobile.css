@@ -1,73 +1,9 @@
 /* Dispositivos móviles*/
-@media screen and (min-width: 375px) and (max-width: 767px){
+@media screen and (max-width: 375px) and (max-width: 767px){
     .bm-burger-button{
         position: fixed;
         width: 36px;
         height: 20px;
-        left: 36px;
-        top: 36px;
-    }
-
-    .bm-burger-bars{
-        background: rebeccapurple;
-    }
-
-    .bm-burger-bars-hover{
-        background: yellow;
-    }
-
-    .bm-cross-button{
-        height: 24px;
-        width: 24px;
-    }
-
-    .bm-cross{
-        background: white;
-    }
-
-    .bm-menu-wrap{
-        position: fixed;
-        height: 100%;
-    }
-
-    .bm-menu{
-        background: linear-gradient(rgba(39,7,112,0.9), rgba(73,16,121,0.9));
-        padding: 2.5em 1.5em 0;
-        font-size: 1.15em;
-    }
-
-    .bm-morph-shape {
-        fill: #70397e;
-    }
-
-    .bm-item-list{
-        color: #fff;
-        padding: 0.8em;
-    }
-
-    .bm-item{
-        display: inline-block;
-        color: #fff;
-        margin-bottom: 10px;
-        text-align: left;
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .bm-item-hover{
-        color: #fff;
-    }
-
-    .bm-overlay{
-        background: rgba(17, 0, 16, 0.541);
-    }
-}
-/* Dispositivos Medianos */
-@media screen and (min-width: 768px) and (max-width: 992px){
-    .bm-burger-button{
-        position: fixed;
-        width: 36px;
-        height: 30px;
         left: 36px;
         top: 36px;
     }
@@ -97,7 +33,7 @@
     }
 
     .bm-menu{
-        background: linear-gradient(rgba(39,7,112,0.9), rgba(73,16,121,0.9));
+        background: linear-gradient(rgb(39,7,112), rgb(73,16,121));
         padding: 2.5em 1.5em 0;
         font-size: 1.15em;
     }
@@ -128,6 +64,84 @@
         background: rgba(17, 0, 16, 0.541);
     }
 
+    .brand-home{
+        position: relative;
+        top: -30px;
+        left: 15px;
+    }
+}
+/* Dispositivos Medianos */
+@media screen and (min-width: 768px) and (max-width: 992px){
+
+    .bm-burger-button{
+        position: fixed;
+        width: 36px;
+        height: 1.5em;
+        left: 36px;
+        top: 36px;
+    }
+
+    .bm-burger-bars{
+        background: rebeccapurple;
+    }
+
+    .bm-burger-bars-hover{
+        background: yellow;
+    }
+
+    .bm-cross-button{
+        height: 24px;
+        width: 24px;
+    }
+
+    .bm-cross{
+        background: white;
+    }
+
+    .bm-menu-wrap{
+        position: fixed;
+        height: 100% !important;
+        width: 100% !important;
+        top: 0 !important;
+    }
+
+    .bm-menu{
+        background: linear-gradient(rgb(39,7,112), rgb(73,16,121));
+        padding: 2.5em 1.5em 0;
+        font-size: 1.15em;
+    }
+
+    .bm-morph-shape {
+        fill: #70397e;
+    }
+
+    .bm-item-list{
+        color: #fff;
+        padding: 0.8em;
+    }
+
+    .bm-item{
+        display: inline-block;
+        color: #fff;
+        margin-bottom: 10px;
+        text-align: left;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .bm-item-hover{
+        color: #fff;
+    }
+
+    .bm-overlay{
+        background: rgba(17, 0, 16, 0.541);
+    }
+
+    .brand-home{
+        position: relative;
+        top: -30px;
+        left: 15px;
+    }
 }
 
 @media screen and (min-width: 993px){

@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import emailjs from 'emailjs-com';
 import Sidebar from '../Sidebar';
+import MenuMobile from '../MenuMobile';
 import '../../Styles/ContactUs.css';
 import FormContact from '../../../img/Images/FormContact.svg';
 import {Form} from 'react-bootstrap';
@@ -76,10 +77,18 @@ class ContactUs extends React.Component{
     render (){
         return(
             <>
+            {/* Menú normal */}
             <Sidebar 
                 pageWrapId={'page-wrap'} 
                 outerContainerId={'outer-container'}
             />
+
+            {/* Menú para dispositivos móviles y tablets */}
+            <MenuMobile
+                pageWrapId={'page-wrap'}
+                outerContainerId={'outer-container'}
+            />
+
             <div className="content-form">
                 <h1> ¡Contáctanos! </h1>
                 <div className="form-contact">
