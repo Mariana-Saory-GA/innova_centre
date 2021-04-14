@@ -13,3 +13,17 @@
 body{
     overflow-x: hidden; /* Nos permite omitir el scroll horizontal */
 }
+
+/* Dispositivos móviles */
+@media screen and (min-width: 375px) and (max-width: 767px){
+    .page-container{
+        min-height: 421vh;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .page-container{
+        min-height: 498.5vh;
+    }
+}

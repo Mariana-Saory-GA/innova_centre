@@ -7,6 +7,7 @@ import FacebookLogin from 'react-facebook-login';
 import './../../Styles/Modals.css';
 import Recaptcha from 'react-recaptcha';
 import axios from 'axios';
+import PasswordF from './Password';
 
 class SignIn extends React.Component{
 
@@ -19,7 +20,8 @@ class SignIn extends React.Component{
             correo: '',
             contrasena: '',
             isVerified: false,
-            open: false
+            open: false,
+            openF: false
         }
     }
     
@@ -83,6 +85,11 @@ class SignIn extends React.Component{
         this.setState({open: !this.state.open})
     }
 
+    /* Modal de recuperación de contraseña */
+    openMondalF = () =>{
+        this.setState({openF: !this.state.openF})
+    }
+
     render(){
 
     /* Google */
@@ -99,7 +106,8 @@ class SignIn extends React.Component{
         return(
             <>
             <div className="content-signin">
-                <Button style={
+                <Button className="btn-si"
+                style={
                     {backgroundColor: '#f0c508', 
                     color: '#000',  
                     position: "absolute", 
@@ -117,20 +125,27 @@ class SignIn extends React.Component{
                         Iniciar sesión
                     </ModalHeader>
                     <ModalBody>
-                   
                         <Form.Group controlId="email">
                             <Label for="formEmail"> Correo: </Label>
-                            <Form.Control type="email" placeholder="Correo electrónico" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"required
-                            onChange={(e) =>this.login.setEmail(e.target.value)} onChange={event => this.valueToState(event.target)}/>
-        
+                            <Form.Control type="email" 
+                                placeholder="Correo electrónico" 
+                                pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required
+                                onChange={(e) =>this.login.setEmail(e.target.value)} 
+                                onChange={event => this.valueToState(event.target)}
+                            />
                         </Form.Group>
                         <Form.Group controlId="contrasena">
                             <Label for="formPassword"> Contraseña: </Label>
-                            <Form.Control type="password" placeholder="Contraseña"required
-                           onChange={(e) =>this.login.setContrasena(e.target.value)} onChange={event => this.valueToState(event.target)} />
+                            <Form.Control type="password" 
+                                placeholder="Contraseña" required
+                                onChange={(e) =>this.login.setContrasena(e.target.value)} 
+                                onChange={event => this.valueToState(event.target)} 
+                            />
+                            <PasswordF/>
                         </Form.Group>
-                            <Form.Check type="Checkbox" label="Recuérdame"/>
-                            <div style={{position:"relative", left:"80px", top:"5px"}}>
+                        <br/>
+                        <Form.Check type="Checkbox" label="Recuérdame"/>
+                            <div style={{position:"relative", right: "50px", top:"5px"}}>
                                 <Recaptcha
                                     sitekey="6LfLe-UZAAAAAET_rtZONdi6JU-0C1n_GBjH9-og"
                                     render="explicit"
@@ -138,7 +153,7 @@ class SignIn extends React.Component{
                                     verifyCallback={this.verifyCallback}
                                 />
                             </div>  
-                    <p className="options-signin"> Inicia sesión con Facebook o Google </p>
+                            <p className="options-signin"> Inicia sesión con Facebook o Google </p>
                         <GoogleLogin
                             clientId="1093473912863-h49r37h0d3ed71d3o959fuvrn2ith96t.apps.googleusercontent.com"
                             buttonText="Google"
@@ -155,21 +170,11 @@ class SignIn extends React.Component{
                             icon="fa-facebook"
                             cssClass="iconFb" />
                     </ModalBody>
-                   
-
                     <ModalFooter class="py-1 ">
                         <Button color="warning" type="submit"> Iniciar sesión </Button>
                         <Button onClick={this.openModal} color="warning"> Cerrar </Button>
                     </ModalFooter>
                     </Form>
-                </Modal>
-
-                <Modal isOper={this.state.openRP}>
-                    <ModalHeader>
-                        Recuperar mi contraseña
-                    </ModalHeader>
-                    <ModalBody>
-                    </ModalBody>
                 </Modal>
             </>
         )
