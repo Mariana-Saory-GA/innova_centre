@@ -23,6 +23,7 @@ export default class SignUp extends React.Component{
               clave_con: '',
               genero: '',
               telefono: '',
+              hash: '',
               isVerified: false,
               openSignUp: false
 
@@ -70,7 +71,7 @@ export default class SignUp extends React.Component{
                 console.log(response.data)
                 if(response.data.length > 5){
                   console.log(response.data)
-                  alert('Usuario registrado');
+                  alert('Usuario registrado, revisa tu correo para activar la cuenta, no olvides revisar la bandeja de spam');
                 }else{
                   alert("El email ya ha sido registrado, intenta con otro");
                 } 
