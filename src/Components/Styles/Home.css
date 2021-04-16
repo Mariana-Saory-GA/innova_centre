@@ -103,6 +103,34 @@ section.content-services{
     font-weight: bolder;
 }
 
+.square-services{
+    position: absolute;
+    margin: auto;
+    width: 1200px;
+    height: 600px;
+    top: 100px;
+    left: 100px;
+}
+
+.services{
+    position: absolute;
+    padding-top: 40px;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.op-serv{
+    width: 230px;
+    padding: 1em;
+    border: 1px solid darkgoldenrod;
+    align-content: center;
+    
+}
 /* Sección de 'Eventos' */
 section.content-events{
     position: relative;

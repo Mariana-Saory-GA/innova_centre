@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import iso from '../../img/Logos/LOGO 2.1 A.png';
+import iconPW from '../../img/Images/web.png';
+import iconMD from '../../img/Images/mdigital.png';
+import iconE from '../../img/Images/ecomm.png';
 import './../Styles/Home.css';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Sidebar from './Sidebar'; 
@@ -81,9 +84,9 @@ class Home extends Component {
                     </div>
                     <div className="square-services">
                         <ul className="services">
-                            <li className="op-serv"> Página Web </li>
-                            <li className="op-serv"> Marketing Digital </li>
-                            <li className="op-serv"> Ecommerce </li>
+                            <li className="op-serv"> <img src={iconPW} className="icon-pw" width="180" height="160" alt="Página Web"/> </li>
+                            <li className="op-serv"> <img src={iconMD} className="icon-md" width="180" height="160" alt="Marketing Digital"/> </li>
+                            <li className="op-serv"> <img src={iconE} className="icon-e"width="180" height="160" alt="Ecommerce"/> </li>
                         </ul>
                     </div>
                 </section>
